@@ -1,0 +1,201 @@
+/*** Take out the divider line between content and sidebar ***/
+#main-content .container:before {background: none;}
+
+/*** Hide Sidebar ***/
+#sidebar {display:none;}
+
+/*** Expand the content area to fullwidth ***/
+@media (min-width: 981px){
+#left-area {
+    width: 100%;
+    padding: 23px 0px 0px !important;
+    float: none !important;
+}
+} 
+
+body.single article.has-post-thumbnail > img:nth-of-type(1),
+body.single article.has-post-thumbnail .et_post_meta_wrapper > img:nth-of-type(1) { 
+    position:absolute; left:0; top:0; 
+}
+
+/*** Responsive Styles Large Desktop And Above ***/
+@media all and (min-width: 1405px) {
+	body.single h1, h2{
+		font-size: 40px;
+		margin: 0px 75px;
+		align-content: left;
+	}
+	body.single h4{
+		font-size: 28px; 
+		margin: 0px 75px; 
+		align-content: left;
+	}
+	body.single p, ul, ol{
+		font-size: 18px;
+		font-weight: 400;
+		margin: 0px 75px;
+		align-content: left;
+	}
+}
+ 
+/*** Responsive Styles Standard Desktop Only ***/
+@media all and (min-width: 1100px) and (max-width: 1405px) {
+	body.single h1, h2{
+		font-size: 36px;
+		margin: 0px 75px;
+		align-content: left;
+	}
+	body.single h4{
+		font-size: 28px; 
+		margin: 0px 75px; 
+		align-content: left;
+	}
+	body.single p, ul, ol{
+		font-size: 16px;
+		font-weight: 400;
+		margin: 0px 75px;
+		align-content: left;
+	}
+}
+ 
+/*** Responsive Styles Tablet And Below ***/
+@media all and (max-width: 980px) {
+	body.single h1, h2{
+		font-size: 32px;
+	}
+	body.single h4{
+		font-size: 24px; 
+		margin: 0px 75px; 
+		align-content: left;
+	}
+	body.single p, ul, ol{
+		font-size: 16px;
+		font-weight: 400;
+	}
+}
+ 
+/*** Responsive Styles Tablet Only ***/
+@media all and (min-width: 768px) and (max-width: 980px) {
+	body.single h1, h2{
+		font-size: 30px;
+	}
+	body.single h4{
+		font-size: 22px; 
+		margin: 0px 75px; 
+		align-content: left;
+	}
+	body.single p, ul, ol{
+		font-size: 16px;
+		font-weight: 400;
+	}
+	body.single img{
+		width: 150%;
+	}
+}
+ 
+/*** Responsive Styles Smartphone Only ***/
+@media all and (max-width: 767px) {
+	body.single h1, h2{
+		font-size: 24px;
+	}
+	body.single h4{
+		font-size: 20px; 
+		margin: 0px 75px; 
+		align-content: left;
+	}
+	body.single p, ul, ol{
+		font-size: 14px;
+		font-weight: 300;
+	}
+	body.single img{
+		width: 150%;
+	}
+}
+ 
+/* Archive and Search Result page 3 column by DiviPeople*/
+.blog .et_pb_post,
+.search .et_pb_post,
+.archive .et_pb_post {
+	width: 67.3%;
+	float: left;
+	margin-top: 20px;
+	margin-right: 3%;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.blog .et_pb_post img,
+.search .et_pb_post img,
+.archive .et_pb_post img{
+	margin-bottom: 10px;
+}
+.blog .et_pb_post h2,
+.search .et_pb_post h2,
+.archive .et_pb_post h2{
+	margin-left: 0px;
+	width: 280px;
+}
+
+.blog .et_pb_post:nth-of-type(3n),
+.search .et_pb_post:nth-of-type(3n),
+.archive .et_pb_post:nth-of-type(3n) {
+	margin-right: 0%;
+}
+@media only screen and ( min-width: 1025px ) {
+.blog .et_pb_post:nth-of-type(3n+4),
+.search .et_pb_post:nth-of-type(3n+4),
+.archive .et_pb_post:nth-of-type(3n+4) {
+	clear: both;
+	}
+}
+@media only screen and ( min-width: 768px ) and ( max-width: 1024px ) {
+.blog .et_pb_post,
+.search .et_pb_post,
+.archive .et_pb_post {
+	width: 90.5%;
+}
+.blog .et_pb_post:nth-of-type(2n+1),
+.search .et_pb_post:nth-of-type(2n+1),
+.archive .et_pb_post:nth-of-type(2n+1) {
+	margin-right: 3%;
+}
+.blog .et_pb_post:nth-of-type(2n+2),
+.search .et_pb_post:nth-of-type(2n+2),
+.archive .et_pb_post:nth-of-type(2n+2) {
+	margin-right: 0%;
+}
+}
+@media only screen and ( max-width: 767px ) {
+.blog .et_pb_post,
+.search .et_pb_post,
+.archive .et_pb_post {
+	width: 100%;
+	margin-right: 0%;
+}
+}
+.blog #left-area,
+.search #left-area,
+.archive #left-area {
+	-moz-column-count: 3;
+	column-count: 3;
+	-moz-column-gap: 60px;
+	column-gap: 60px;
+}
+.blog .et_pb_post > a,
+.archive .et_pb_post > a,
+.search .et_pb_post > a {
+	margin: -20px -20px 10px;
+	display: block;
+}
+.blog #left-area .et_pb_post,
+.search #left-area .et_pb_post,
+.archive #left-area .et_pb_post {
+	overflow: hidden; /* fix for Firefox */
+	page-break-inside: avoid;
+	break-inside: avoid-column;
+	width: 100%;
+	padding: 19px;
+	border: 0px;
+	background-color: #fff;
+	word-wrap: break-word;
+	display: inline-block;
+}
