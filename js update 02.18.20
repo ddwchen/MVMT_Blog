@@ -1,0 +1,14 @@
+<script>
+jQuery(function($){
+    var featured = $('body.single article.has-post-thumbnail .et_post_meta_wrapper img:nth-of-type(1)');
+
+    if (featured.length) {
+        adjust_margin();
+        $(window).resize(function(){ adjust_margin(); });
+    }
+
+    function adjust_margin() {
+        $('#content-area').css('margin-top', featured.height());
+    }
+});
+</script>
